@@ -1,6 +1,5 @@
 """
-Synchronous SGD training on MNIST
-Use distributed MPI backend
+Synchronous SGD training on MNIST dataset using distributed MPI backend
 PyTorch distributed tutorial:
     http://pytorch.org/tutorials/intermediate/dist_tuto.html
 """
