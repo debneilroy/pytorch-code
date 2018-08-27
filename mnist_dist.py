@@ -20,7 +20,7 @@ from random import Random
 from torch.multiprocessing import Process
 from torch.autograd import Variable
 from torchvision import datasets, transforms
-#from data.distributed import DistributedDataParallel
+
 
 gbatch_size = 128
 
@@ -50,16 +50,7 @@ class DataPartitioner(object):
         data_len = len(data)
         indexes = [x for x in range(0, data_len)]
         rng.shuffle(indexes)
-        """
-        Be cautious about index shuffle, this is performed on each rank
-        The shuffled index must be unique across all ranks
-        Theoretically with the same seed Random() generates the same sequence
-        This might not be true in rare cases
-        You can add an additional synchronization for 'indexes', just for safety
-        Anyway, this won't take too much time
-        e.g.
-            dist.broadcast(indexes, 0)
-        """
+        
         for frac in sizes:
             part_len = int(frac * data_len)
             self.partitions.append(indexes[0:part_len])
