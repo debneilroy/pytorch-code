@@ -22,32 +22,5 @@ export PYTHONPATH=/sdcc/u/droy/.conda/envs/pytorch_mpi/lib/python3.5/site-packag
 export PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/bin/:$PATH
 export LD_LIBRARY_PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/lib/:$LD_LIBRARY_PATH
 
-mpirun -n 2 python mnist_dist.py > mnist_dist.txt
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
--- INSERT --                                                                                                                                                                1,1           All
-
--- INSERT --                                                                                                                                                                25,1          All
+mpirun -n 2 python mnist_dist.py > mnist_dist.txt                                                                                                                                                                                                                                                                                                                   25,1          All
 
