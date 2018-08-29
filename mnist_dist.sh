@@ -3,7 +3,7 @@
 #SBATCH -p debug
 #SBATCH -t 00:30:00
 #SBATCH -N 2
-#SBATCH --ntasks-per-node=16
+##SBATCH --ntasks-per-node=16
 #SBATCH -n 4
 #SBATCH --gres=gpu:4
 #SBATCH -C tesla
@@ -22,5 +22,5 @@ export PYTHONPATH=/sdcc/u/droy/.conda/envs/pytorch_mpi/lib/python3.5/site-packag
 export PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/bin/:$PATH
 export LD_LIBRARY_PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/lib/:$LD_LIBRARY_PATH
 
-mpirun -n 2 python mnist_dist.py > mnist_dist.txt                                                                                                                                                                                                                                                                                                                   25,1          All
+mpirun -np 2 python mnist_dist.py > mnist_dist.txt                                                                                                                                                                                                                                                                                                                   25,1          All
 
