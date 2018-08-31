@@ -22,7 +22,7 @@ export PYTHONPATH=/sdcc/u/droy/.conda/envs/pytorch_mpi/lib/python3.5/site-packag
 export PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/bin/:$PATH
 export LD_LIBRARY_PATH=/hpcgpfs01/software/openmpi/3.1.1-gnu/lib/:$LD_LIBRARY_PATH
 
-mpirun -np 2 python mnist_dist_1.py --world-size 2 --dist-backend 'mpi' > mnist_dist_1.txt
+python mnist_dist.py > mnist_dist.txt
 
 ~
 ~
