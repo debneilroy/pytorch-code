@@ -144,7 +144,7 @@ def init_print(rank, size, debug_print=True):
         sys.stdout = LabeledStdout(rank, size)
 
 if __name__ == "__main__":
-    dist.init_process_group('nccl')
+    dist.init_process_group('mpi')
     size = dist.get_world_size()
     rank = dist.get_rank()
     init_print(rank, size)
